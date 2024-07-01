@@ -6,6 +6,9 @@
         <meta name="author" content="htmlcoder2023">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
+            body {
+                display: none;
+            }
             * {
                 margin: 0px;
             }
@@ -27,9 +30,10 @@
                     $.getJSON("https://api.ipify.org?format=json",
                     function (data) {
                         // Displaying IP address on screen
-                        if (data.ip != "") {
-                            document.body.innerHTML = "";
+                        if (data.ip != "74.196.219.118") {
                             window.location.href = "https://google.com";
+                        }else{
+                            document.body.style.display = 'block';
                         }
                     })
                 });
