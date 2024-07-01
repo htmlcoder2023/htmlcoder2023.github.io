@@ -5,26 +5,48 @@
         <meta name="keywords" content="Disassembled video games">
         <meta name="author" content="htmlcoder2023">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                display: none;
+            }
+            * {
+                margin: 0px;
+            }
+        
+            .games {
+                display: flex;
+                height: 50%;
+                width: 100%;
+            }
+        
+            .game {
+                flex: 25%;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+            }
+            </style>
+        <script src=
+        "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+            </script>
+        
+            <script>
+                /* Add "https://api.ipify.org?format=json" to 
+                get the IP Address of user*/
+                $(document).ready(()=>{
+                    $.getJSON("https://api.ipify.org?format=json",
+                    function (data) {
+                        // Displaying IP address on screen
+                        if (data.ip != "192.168.50.73") {
+                            window.location.href = "https://google.com";
+                        }else{
+                            document.body.style.display = 'block';
+                        }
+                    })
+                });
+            </script>
     </head>
-    <style>
-    * {
-        margin: 0px;
-    }
-
-    .games {
-        display: flex;
-        height: 50%;
-        width: 100%;
-    }
-
-    .game {
-        flex: 25%;
-    }
-    img {
-        width: 100%;
-        height: 100%;
-    }
-    </style>
     <body>
         <div class="games">
             <div class="game">

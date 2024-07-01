@@ -16,6 +16,24 @@
                 float: left;
             }
         </style>
+        <script src=
+        "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+            </script>
+        
+            <script>
+                /* Add "https://api.ipify.org?format=json" to 
+                get the IP Address of user*/
+                $(document).ready(()=>{
+                    $.getJSON("https://api.ipify.org?format=json",
+                    function (data) {
+                        // Displaying IP address on screen
+                        if (data.ip != "") {
+                            document.body.innerHTML = "";
+                            window.location.href = "https://google.com";
+                        }
+                    })
+                });
+            </script>
     </head>
     <body>
         <div id="ntsc">
